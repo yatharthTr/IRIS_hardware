@@ -3,31 +3,17 @@
 ## A) Control Signals for Instructions
 
 ### *1. For beq (Branch Equal)*
-- *Branch:* 1  - *MemRead:* 0 
-- *MemRead:* 0  
-- *MemtoReg:* X (does not matter, no register write)  
-- *ALUOp:* 01 (typically means "subtract/compare")  
-- *MemWrite:* 0  
-- *ALUSrc:* 0 (we compare two registers)  
-- *RegWrite:* 0  
+- *Branch:* 1  | *MemRead:* 0  | *MemtoReg:* X (does not matter, no register write)  |  *ALUOp:* 01 (typically means "subtract/compare")  |  *MemWrite:* 0  
+- *ALUSrc:* 0 (we compare two registers)  | *RegWrite:* 0  
 
 ### *2. For sw (Store Word)*
-- *Branch:* 0  
-- *MemRead:* 0  
-- *MemtoReg:* X (does not matter, no register write)  
-- *ALUOp:* 00 (we do an add for address calculation)  
-- *MemWrite:* 1  
-- *ALUSrc:* 1 (immediate offset for store address)  
-- *RegWrite:* 0  
+- *Branch:* 0  | *MemRead:* 0 | *MemtoReg:* X (does not matter, no register write)  | *ALUOp:* 00 (we do an add for address calculation) | *MemWrite:* 1 
+- *ALUSrc:* 1 (immediate offset for store address) | *RegWrite:* 0   
+
 
 ### *3. For lw (Load Word)*
-- *Branch:* 0  
-- *MemRead:* 1  
-- *MemtoReg:* 1  
-- *ALUOp:* 00 (add for address calculation)  
-- *MemWrite:* 0  
-- *ALUSrc:* 1 (immediate offset)  
-- *RegWrite:* 1  
+- *Branch:* 0  | *MemRead:* 1  | *MemtoReg:* 1 | *ALUOp:* 00 (add for address calculation) | *MemWrite:* 0  
+- *ALUSrc:* 1 (immediate offset) | *RegWrite:* 1     
 
 ---
 
