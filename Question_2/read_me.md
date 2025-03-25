@@ -3,7 +3,7 @@
 ## A) Control Signals for Instructions
 
 ### *1. For beq (Branch Equal)*
-- *Branch:* 1  
+- *Branch:* 1  - *MemRead:* 0 
 - *MemRead:* 0  
 - *MemtoReg:* X (does not matter, no register write)  
 - *ALUOp:* 01 (typically means "subtract/compare")  
