@@ -1,0 +1,29 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000025396662720 .scope module, "Mux2to1" "Mux2to1" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "sel";
+    .port_info 1 /INPUT 32 "s0";
+    .port_info 2 /INPUT 32 "s1";
+    .port_info 3 /OUTPUT 32 "out";
+P_0000025396694b20 .param/l "size" 0 2 2, +C4<00000000000000000000000000100000>;
+v0000025396662f10_0 .net/s "out", 31 0, L_00000253966629f0;  1 drivers
+o0000025396696828 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000025396662cf0_0 .net/s "s0", 31 0, o0000025396696828;  0 drivers
+o0000025396696858 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v00000253966628b0_0 .net/s "s1", 31 0, o0000025396696858;  0 drivers
+o0000025396696888 .functor BUFZ 1, C4<z>; HiZ drive
+v0000025396662950_0 .net "sel", 0 0, o0000025396696888;  0 drivers
+L_00000253966629f0 .functor MUXZ 32, o0000025396696828, o0000025396696858, o0000025396696888, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Mux2to1.v";

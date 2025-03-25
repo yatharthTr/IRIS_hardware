@@ -1,0 +1,196 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002b5e9a8b9e0 .scope module, "InstructionMemory" "InstructionMemory" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "readAddr";
+    .port_info 1 /OUTPUT 32 "inst";
+L_000002b5e9ae6538 .functor BUFT 1, C4<00000000000000000000000010000000>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a62720_0 .net/2u *"_ivl_0", 31 0, L_000002b5e9ae6538;  1 drivers
+v000002b5e9a936b0_0 .net *"_ivl_10", 32 0, L_000002b5e9a93ca0;  1 drivers
+L_000002b5e9ae65c8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a93750_0 .net *"_ivl_13", 0 0, L_000002b5e9ae65c8;  1 drivers
+L_000002b5e9ae6610 .functor BUFT 1, C4<000000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a93a20_0 .net/2u *"_ivl_14", 32 0, L_000002b5e9ae6610;  1 drivers
+v000002b5e9a941a0_0 .net *"_ivl_16", 32 0, L_000002b5e9a94560;  1 drivers
+v000002b5e9a93d40_0 .net *"_ivl_18", 7 0, L_000002b5e9b3f0d0;  1 drivers
+v000002b5e9a93980_0 .net *"_ivl_2", 0 0, L_000002b5e9a93c00;  1 drivers
+v000002b5e9a93ac0_0 .net *"_ivl_20", 32 0, L_000002b5e9b3f350;  1 drivers
+L_000002b5e9ae6658 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a946a0_0 .net *"_ivl_23", 0 0, L_000002b5e9ae6658;  1 drivers
+L_000002b5e9ae66a0 .functor BUFT 1, C4<000000000000000000000000000000010>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a93e80_0 .net/2u *"_ivl_24", 32 0, L_000002b5e9ae66a0;  1 drivers
+v000002b5e9a93f20_0 .net *"_ivl_26", 32 0, L_000002b5e9b40750;  1 drivers
+v000002b5e9a93de0_0 .net *"_ivl_28", 7 0, L_000002b5e9b3f3f0;  1 drivers
+v000002b5e9a942e0_0 .net *"_ivl_30", 32 0, L_000002b5e9b3fad0;  1 drivers
+L_000002b5e9ae66e8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a94380_0 .net *"_ivl_33", 0 0, L_000002b5e9ae66e8;  1 drivers
+L_000002b5e9ae6730 .functor BUFT 1, C4<000000000000000000000000000000011>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a94240_0 .net/2u *"_ivl_34", 32 0, L_000002b5e9ae6730;  1 drivers
+v000002b5e9a94600_0 .net *"_ivl_36", 32 0, L_000002b5e9b3f5d0;  1 drivers
+v000002b5e9a93fc0_0 .net *"_ivl_38", 31 0, L_000002b5e9b40390;  1 drivers
+L_000002b5e9ae6580 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000002b5e9a93840_0 .net/2u *"_ivl_4", 31 0, L_000002b5e9ae6580;  1 drivers
+v000002b5e9a94100_0 .net *"_ivl_6", 7 0, L_000002b5e9a94740;  1 drivers
+v000002b5e9a938e0_0 .net *"_ivl_8", 7 0, L_000002b5e9a94060;  1 drivers
+v000002b5e9a94420_0 .net "inst", 31 0, L_000002b5e9b40b10;  1 drivers
+v000002b5e9a944c0 .array "insts", 0 127, 7 0;
+o000002b5e9a9b368 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v000002b5e9a93b60_0 .net "readAddr", 31 0, o000002b5e9a9b368;  0 drivers
+L_000002b5e9a93c00 .cmp/ge 32, o000002b5e9a9b368, L_000002b5e9ae6538;
+L_000002b5e9a94740 .array/port v000002b5e9a944c0, o000002b5e9a9b368;
+L_000002b5e9a94060 .array/port v000002b5e9a944c0, L_000002b5e9a94560;
+L_000002b5e9a93ca0 .concat [ 32 1 0 0], o000002b5e9a9b368, L_000002b5e9ae65c8;
+L_000002b5e9a94560 .arith/sum 33, L_000002b5e9a93ca0, L_000002b5e9ae6610;
+L_000002b5e9b3f0d0 .array/port v000002b5e9a944c0, L_000002b5e9b40750;
+L_000002b5e9b3f350 .concat [ 32 1 0 0], o000002b5e9a9b368, L_000002b5e9ae6658;
+L_000002b5e9b40750 .arith/sum 33, L_000002b5e9b3f350, L_000002b5e9ae66a0;
+L_000002b5e9b3f3f0 .array/port v000002b5e9a944c0, L_000002b5e9b3f5d0;
+L_000002b5e9b3fad0 .concat [ 32 1 0 0], o000002b5e9a9b368, L_000002b5e9ae66e8;
+L_000002b5e9b3f5d0 .arith/sum 33, L_000002b5e9b3fad0, L_000002b5e9ae6730;
+L_000002b5e9b40390 .concat [ 8 8 8 8], L_000002b5e9b3f3f0, L_000002b5e9b3f0d0, L_000002b5e9a94060, L_000002b5e9a94740;
+L_000002b5e9b40b10 .functor MUXZ 32, L_000002b5e9b40390, L_000002b5e9ae6580, L_000002b5e9a93c00, C4<>;
+    .scope S_000002b5e9a8b9e0;
+T_0 ;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 2, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 3, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 4, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 5, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 6, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 7, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 8, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 9, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 10, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 11, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 12, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 13, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 14, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 15, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 16, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 17, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 18, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 19, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 20, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 21, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 22, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 23, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 24, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 25, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 26, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 27, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 28, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 29, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 30, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %pushi/vec4 0, 0, 8;
+    %ix/load 4, 31, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000002b5e9a944c0, 4, 0;
+    %vpi_call 2 21 "$readmemb", "TEST_INSTRUCTIONS.dat", v000002b5e9a944c0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "InstructionMemory.v";
